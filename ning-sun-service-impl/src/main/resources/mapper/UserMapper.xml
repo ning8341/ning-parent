@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ning.dao.UserMapper">
+
+    <select id="selectUserById" resultType="com.ning.model.UserModel">
+        SELECT
+            t.id_,
+            t.name_
+        FROM
+            s_user t
+        WHERE
+            t.id_=#{id}
+    </select>
+
+</mapper>

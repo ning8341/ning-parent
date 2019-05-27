@@ -1,0 +1,40 @@
+spring:
+  dubbo:
+    module:
+      default: false
+    application:
+      name: ning-dubbo-consumer
+      owner: ning-dubbo-consumer
+      qosEnable: false
+    registry:
+      protocol: zookeeper
+      address: 192.168.2.189:2181
+    protocol:
+      name: dubbo
+      port: 20880
+    scan: com.ning.controller
+
+  datasource:
+    url: jdbc:mysql://192.168.2.189:3306/ning-ge?autoReconnect=true&useSSL=false&useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull
+    username: root
+    password: 123456
+    driverClassName: com.mysql.jdbc.Driver
+    initialSize: 5
+    maxActive: 20
+    minIdle: 5
+    maxWait: 60000
+    defaultReadOnly: false
+    filters: stat
+    connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=2000
+management:
+  security:
+    enabled: false
+
+
+server:
+  port: 9001
+
+
+logging:
+  level:
+     root: info
