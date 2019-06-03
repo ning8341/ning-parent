@@ -71,4 +71,4 @@ server:
 
 logging:
   level:
-     root: info
+    com.ning.dao: trace # 改成你的mapper文件所在包路径

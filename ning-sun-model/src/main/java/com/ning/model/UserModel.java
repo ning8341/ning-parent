@@ -15,7 +15,7 @@ import java.io.Serializable;
  * @Version: ning-parentV1.0
  */
 @Data
-@TableName("s_user")
+@TableName("s")
 public class UserModel implements Serializable{
 
     @TableId(value = "id_",type = IdType.ID_WORKER)
